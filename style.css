@@ -1,0 +1,45 @@
+#chain, #bell, #battery{
+	font-size: 50px;
+}
+
+#arrows {
+	font-size: 100px;
+}
+
+#emoji{
+	font-size: 80px;
+}
+
+.modalBtn:hover{
+	background-color:#B22222;
+}
+
+.modal1{
+	display: none;
+	height: 150px;
+	width: 500px;
+	background-color: #ADFF2F;
+	animation-name: modalShow;
+	animation-duration: 1s;	
+	box-shadow: 5px 5px #008000;
+}
+
+.modalContent{
+	margin-left: 30px;
+}
+
+.closeBtn{
+	float: right;
+	font-size: 30px;
+}
+
+.closeBtn:hover{
+	color: white;
+	cursor: pointer;
+}
+
+
+@keyframes modalShow{
+	from{opacity: 0}
+	to{opacity: 1}
+}

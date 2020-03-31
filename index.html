@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sahil Vig Project</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+		integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<!--<body onresize="alert('You resized the window');"> UNCOMMENT THIS LATER-->
+
+<body>
+	<div class="container">
+		<h1 style="text-align: center;">Javascript Educator by Sahil Vig</h1>
+		<h5 style="text-align: center;">(In the beginning, the focus should be on learning and not practicality)</h5>
+	</div>
+
+	<div class="container">
+		<h2 class="mt-4"><u>MOUSE EVENTS</u></h2>
+		<h6 id="sctext" class="mt-4" style="color: red">Single click on the button</h6>
+		<button id="sc" class="mt-1 btn btn-gray">Single click</button>
+
+		<h6 id="dbtext" class="mt-4" style="color: red">Double click on the button</h6>
+		<button id="dc" class="mt-1 btn btn-gray">Double click</button>
+
+		<h6 id="mdtext" class="mt-4" style="color: red">Event will fire on Mouse Down</h6>
+		<button id="md" class="mt-1 btn btn-gray">Mouse Down Event</button>
+
+		<h6 id="mutext" class="mt-4" style="color: red">Event will fire on Mouse Up</h6>
+		<button id="mu" class="mt-1 btn btn-gray">Mouse Up Event</button>
+
+		<h6 class="mt-5">Enter the area below to fire an event</h6>
+		<div id="box" class="mt-4" style="width: 400px; height: 50px; background-color: #7CFC00;">
+			<p>Hover over this text</p>
+		</div>
+		<div id="boxHoverOutput"></div>
+		<h6 class="mt-3">The difference is that Mouse Over is only fired when we hover over the text.</h6>
+
+		<h6 class="mt-5">Enter the area below to fire an event</h6>
+		<div id="box2" class="mt-4" style="width: 400px; height: 50px; background-color: #7CFC00;">
+			<p>Hover over this text</p>
+		</div>
+		<div id="boxHoverOutput2"></div>
+
+		<h6 class="mt-5">Move your mouse in the area below(See in console log)</h6>
+		<div id="box3" class="mt-4" style="width: 400px; height: 50px; background-color: #00FFFF;"></div>
+		<div id="mouseMoveOutput"></div>
+
+		<h6 class="mt-5">Move the cursor to see the cursor positons</h6>
+		<div id="offset" style="width: 200px; height: 200px; background-color: red;"></div>
+		<div id="offsetOutput"></div>
+
+		<h6 class="mt-5">Move the cursor to change the body color</h6>
+		<div id="boxColor" style="width: 200px; height: 200px; background-color: #f4f4f4;"></div>
+		<div id="boxColorOutput"></div>
+
+
+		<h2 class="mt-4"><u>BUTTON EVENTS</u></h2>
+		<h6 id="dbtext" class="mt-5">Click the button below to change the body color to gold</h6>
+		<button id="bodycolor" class="mt-1 btn btn-gray">Change body color</button>
+
+		<h6 id="dbtext" class="mt-5">Click the button below to change the body color back to white</h6>
+		<button id="bodycolor2" class="mt-1 btn btn-gray">Change body color</button>
+
+		<h6 class="mt-5">Click the button below to know cursor position(X Axis) at the time of event firing</h6>
+		<button id="clientx" class="btn btn-gray">Show clientX</button>
+		<div id="clientxOutput"></div>
+
+		<h6 class="mt-5">Click the button below to know cursor position(Y Axis) at the time of event firing</h6>
+		<button id="clienty" class="btn btn-gray">Show clientY</button>
+		<div id="clientyOutput"></div>
+
+		<h6 class="mt-5">Click to know cursor position according to element(X Axis)</h6>
+		<button id="offsetx" class="btn btn-gray">Show offsetX</button>
+		<div id="offsetxOutput"></div>
+
+		<h6 class="mt-5">Click to know cursor position according to element(Y Axis)</h6>
+		<button id="offsety" class="btn btn-gray">Show offsetY</button>
+		<div id="offsetyOutput"></div>
+
+		<h6 class="mt-5">Click to know the element that fired the event</h6>
+		<button id="target" class="btn btn-gray">Show element</button>
+		<div id="targetOutput"></div>
+
+		<h6 class="mt-5">Click to know the ID of element that fired the event</h6>
+		<button id="targetid" class="btn btn-gray">Show element ID</button>
+		<div id="targetidOutput"></div>
+
+		<h6 class="mt-5">Click to know the className of element that fired the event</h6>
+		<button id="targetclass" class="btn btn-gray">Show element class</button>
+		<div id="targetclassOutput"></div>
+
+		<h6 class="mt-5">Click to know the event type</h6>
+		<button id="eventType" class="btn btn-gray">Show event type</button>
+		<div id="eventTypeOutput"></div>
+
+		<h6 class="mt-5">Press the button holding ALT key</h6>
+		<button id="alt" class="btn btn-gray">Hold ALT Key</button>
+		<div id="altOutput"></div>
+
+		<h6 class="mt-5">Press the button holding SHIFT key</h6>
+		<button id="shift" class="btn btn-gray">Hold SHIFT Key</button>
+		<div id="shiftOutput"></div>
+
+		<h6 class="mt-5">Press the button holding CTRL key</h6>
+		<button id="ctrl" class="btn btn-gray">Hold CTRL Key</button>
+		<div id="ctrlOutput"></div>
+
+		<h6 class="mt-5">Type to show the content typed: </h6>
+		<input id="showInput" type="text" class="form-control-md">
+		<div id="showInputOutput"></div>
+
+		<h6 class="mt-5">Fire keyDown Event: </h6>
+		<input id="keydown" type="text" class="form-control-md">
+		<div id="keydownOutput"></div>
+
+
+		<h6 class="mt-5">Fire keyUp Event: </h6>
+		<input id="keyup" type="text" class="form-control-md">
+		<div id="keyupOutput"></div>
+
+
+		<h6 class="mt-5">Fire keyPress Event: </h6>
+		<input id="keypress" type="text" class="form-control-md">
+		<div id="keypressOutput"></div>
+
+
+		<h6 class="mt-5">Fire Focus Event: </h6>
+		<input id="focusblur" type="text" class="form-control-md">
+		<div id="focusblurOutput"></div>
+
+		<h6 class="mt-5">Type something and cut it: </h6>
+		<input id="cut" type="text" class="form-control-md">
+		<div id="cutOutput"></div>
+
+		<h6 class="mt-5">Type something and paste it: </h6>
+		<input id="paste" type="text" class="form-control-md">
+		<div id="pasteOutput"></div>
+
+		<h6 class="mt-5">Type something and cut it to change the body color to Gold</h6>
+		<input id="cutBody" type="text" class="form-control-md">
+		<div id="cutBodyOutput"></div>
+
+		<h6 class="mt-5">Select something to show the value selected:</h6>
+		<select id="select">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<div id="selectOutput"></div>
+
+		<h6 class="mt-5 mb-5">Resize the window for an alert.</h6>
+
+		<h2 class="mt-5 mb-2">Javascript Animations:</h2>
+		<h6 class="mb-5">The animations shown under are different Font-Awesome icons which have been animated through plain
+			Javascript(No JQuery plug-in has been used by me).</h6>
+
+		<div id="chain" class="fa"></div>
+		<br><br>
+		<div id="bell" class="fa"></div>
+		<br><br>
+		<div id="battery" class="fa"></div>
+		<br><br>
+		<div id="arrows" class="fa"></div>
+		<br><br>
+		<div id="emoji" class="fa"></div>
+		<br><br>
+
+		<h6 class="mt-5 mb-2">Click the button below to show a modal:</h6>
+		<button class="btn btn-dark modalBtn mb-3" id="modalBtn">Click here</button>
+
+		<div class="modal1" id="modal1">
+			<div class="modalContent">
+				<span class="closeBtn">&times;</span>
+				<h2 class="modalHeading">This is Modal Heading</h2>
+				<p class="modalParagraph">This is Modal Paragraph</p>
+				<h2 class="modalFooter">This is Modal Footer</h2>
+			</div>
+		</div>
+		<br><br>
+
+		<!-- WEIGHT CONVERTER APP -->
+		<h2 class="mt-5 mb-2">A small weight converter app</h2>
+
+		<input type="number" id="gramsInput" class="form-control form-control-lg mb-1" placeholder="Enter grams">
+
+		<div id="convertedValues">
+			<div class="card">
+				<div class="card-block bg-primary mb-1">
+					<h4>Pounds:</h4>
+					<div id="poundsOutput"></div>
+				</div>
+
+				<div class="card">
+					<div class="card-block bg-success mb-1">
+						<h4>Kilograms:</h4>
+						<div id="kilosOutput"></div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-block bg-danger mb-1">
+						<h4>Ounces:</h4>
+						<div id="ozOutput"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 
+		<h3 class="mt-5 mb-2">MYSQL Database connectivity through Javascript, AJAX, PHP, HTML, CSS and Bootstrap. No
+			external library such as JQUERY was used.</h3>
+
+		<h3 class="mt-5 mb-2">Enter data to database:</h3>
+
+		<form id="myForm" method="GET" action="process.php">
+			
+		<input type="text" class="form-control form-control-md mb-3" id="id"  placeholder="Type an ID here" autocomplete="off"></input>
+			<label class="mt-2">What's your name:</label>
+			<input type="text" class="form-control form-control-md mb-3" id="name" placeholder="Enter you name here"
+				autocomplete="off"></input>
+
+		<input type="text" class="form-control form-control-md mb-3" id="age" placeholder="Enter you age here" autocomplete="off"></input>
+
+		<label class="mt-2">What's your favourite activity:</label>
+		<input type="text" class="form-control form-control-md mb-3" id="activity" placeholder="Enter you hobby here" autocomplete="off"></input>
+
+		<label class="mt-2">What's your father's name:</label>
+		<input type="text" class="form-control form-control-md mb-3" id="fname" placeholder="Enter you father's name here" autocomplete="off"></input> 
+
+			<input type="submit" value="Submit Form" class="btn btn-primary" id="submitForm" name="submit">
+
+			<div id="userAdded"></div>
+
+		</form>
+
+		<h3 class="mt-5 mb-2">Display/Fetch data from database:</h3>
+		<h6>(Using ES-6 Backticks Syntax)</h6>
+		<button id="fetchData" class="btn btn-primary">Display Data</button>
+		<div id="displayData"></div> 
+	
+	-->
+
+
+
+	</div>
+	<script src="main.js"></script>
+
+</body>
+
+</html>
