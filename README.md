@@ -1,0 +1,1 @@
+A webpage In which I tried to cover all the essential Javascript mouse and button events while covering a few animations and a small weight converter app. 
